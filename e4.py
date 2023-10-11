@@ -13,50 +13,53 @@
 
 # Your program should ask whether you want to code or decode
 
-
 import random
 import string
 
-msg2 = ""
 a = int(input(" 1. Encode \n 2. Decode \n Enter your choice:-\t"))
-y = 0
-x = True
-while( a < 3):
-    match(a):
-        case 1:
-            msg = input(" Enter your message to encode:-\t")
-            s = msg[0]
-            s1=msg.replace(msg[0],"")
-            msg2 = s1 + s
-            l = string.ascii_lowercase
-            msg2 = ''.join(random.choice(l) for i in range(3)) + msg2
-            msg2 =msg2 +  ''.join(random.choice(l) for i in range(3)) 
-            print(f"Encoded message is:- {msg2}\n")
-            
-            print(f"Do you want to decode this message {msg2} \n ")
-            b = input("Press y: yes or n:no\t")
-            if (b == 'y' or b == 'Y'):
-                y = 1
-                a = 2
-                msg = msg2
-            else:
-                break
-        case 2:
-            if (y == 1):
-                msg = msg[3:len(msg) - 3]
-                s1 = msg[len(msg)-1]
-                msg = msg.replace(msg[len(msg)-1],"")
-                msg = s1 + msg
-                print(f"Decoded message is:- {msg}")
-                a = 3
-            else:
-                msg = input("Enter your message to decode:-\t")
-                # msg = msg[0:3]
-                msg = msg[3:len(msg) - 3]
-                s1 = msg[len(msg)-1]
-                msg = msg.replace(msg[len(msg)-1],"")
-                msg = s1 + msg
-                print(f"decoded message is:- {msg}")
-                a = 3
-        case _:
-            print("Invalid choice")
+if (a > 0 and a < 3):
+    msg2 = ""
+    y = 0
+    x = True
+
+    while( a < 3):
+        match(a):
+            case 1:
+                msg = input(" Enter your message to encode:-\t")
+                s = msg[0]
+                s1=msg.replace(msg[0],"")
+                msg2 = s1 + s
+                l = string.ascii_lowercase
+                msg2 = ''.join(random.choice(l) for i in range(3)) + msg2
+                msg2 =msg2 +  ''.join(random.choice(l) for i in range(3)) 
+                print(f"Encoded message is:- {msg2}\n")
+                
+                print(f"Do you want to decode this message {msg2} \n ")
+                b = input("Press y: yes or n:no\t")
+                if (b == 'y' or b == 'Y'):
+                    y = 1
+                    a = 2
+                    msg = msg2
+                else:
+                    break
+            case 2:
+                if (y == 1):
+                    msg = msg[3:len(msg) - 3]
+                    s1 = msg[len(msg)-1]
+                    msg = msg.replace(msg[len(msg)-1],"")
+                    msg = s1 + msg
+                    print(f"Decoded message is:- {msg}")
+                    a = 3
+                else:
+                    msg = input("Enter your message to decode:-\t")
+                    # msg = msg[0:3]
+                    msg = msg[3:len(msg) - 3]
+                    s1 = msg[len(msg)-1]
+                    msg = msg.replace(msg[len(msg)-1],"")
+                    msg = s1 + msg
+                    print(f"decoded message is:- {msg}")
+                    a = 3
+            case _:
+                print("Invalid choice")
+else:
+    raise ValueError("Invalid choice")
