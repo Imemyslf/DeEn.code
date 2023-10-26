@@ -20,7 +20,6 @@ a = int(input(" 1. Encode \n 2. Decode \n Enter your choice:-\t"))
 if (a > 0 and a < 3):
     msg2 = ""
     y = 0
-    x = True
 
     while( a < 3):
         match(a):
@@ -28,20 +27,33 @@ if (a > 0 and a < 3):
                 
                 msg = input(" Enter your message to encode:-\t")
                 if (len(msg) > 3):
-                    s = msg[0]
-                    s1=msg.replace(msg[0],"")
-                    msg2 = s1 + s
-                    l = string.ascii_lowercase
-                    msg2 = ''.join(random.choice(l) for i in range(3)) + msg2
-                    msg2 =msg2 +  ''.join(random.choice(l) for i in range(3)) 
-                    print(f"Encoded message is:- {msg2}\n")
+                    for i in range(len(msg)):
+                        if(msg[i] == " "):
+                            msg = msg.replace(msg[i],"!")
+                    print(msg)
+                    msg = msg[1:] + msg[0]
+                    print(msg)
+                    msg2 = ""
                     
-                    print(f"Do you want to decode this message {msg2} \n ")
+                    for i in range(len(msg)):
+                        if (msg[i] == "!"):
+                            msg2 = msg2 + "!"
+                            continue
+                        else:
+                            msg1 = chr(ord(msg[i]) + 100)
+                            msg2 = msg2 + msg1
+                    print(msg2)
+                    msg = msg2
+                    l = string.ascii_lowercase
+                    msg = ''.join(random.choice(l) for i in range(3)) + msg
+                    msg =msg +  ''.join(random.choice(l) for i in range(3)) 
+                    print(f"Encoded message is:- {msg}\n")
+                    
+                    print(f"Do you want to decode this message {msg} \n ")
                     b = input("Press y: yes or n:no\t")
                     if (b == 'y' or b == 'Y'):
                         y = 1
                         a = 2
-                        msg = msg2
                     else:
                         break
                 else:
@@ -62,11 +74,21 @@ if (a > 0 and a < 3):
                         msg = msg[::-1]
                         print(f"Decoded message is:- {msg}")
                         a = 3
-                    else:
-                        msg = msg[3:len(msg) - 3]
+                    else: 
+                        msg = msg[3:len(msg) - 3] 
+                        msg2 = ""
+                        for i in range(len(msg)):
+                            if (msg[i] == "!"):
+                                msg2 = msg2 + " "
+                                continue
+                            else:
+                                msg1 = chr(ord(msg[i]) - 100)
+                                msg2 = msg2 + msg1
+                        msg = msg2 
                         s1 = msg[len(msg)-1]
                         msg = msg.replace(msg[len(msg)-1],"")
                         msg = s1 + msg
+                        
                         print(f"Decoded message is:- {msg}")
                         a = 3
                 else:
@@ -76,11 +98,21 @@ if (a > 0 and a < 3):
                         print(f"Decoded message is:- {msg}")
                         a = 3
                     else:
-                        msg = msg[3:len(msg) - 3]
+                        msg = msg[3:len(msg) - 3] 
+                        msg2 = ""
+                        for i in range(len(msg)):
+                            if (msg[i] == "!"):
+                                msg2 = msg2 + " "
+                                continue
+                            else:
+                                msg1 = chr(ord(msg[i]) - 100)
+                                msg2 = msg2 + msg1
+                        msg = msg2 
                         s1 = msg[len(msg)-1]
                         msg = msg.replace(msg[len(msg)-1],"")
                         msg = s1 + msg
-                        print(f"decoded message is:- {msg}")
+                        
+                        print(f"Decoded message is:- {msg}")
                         a = 3
             case _:
                 print("Invalid choice")
