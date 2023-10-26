@@ -16,29 +16,28 @@
 import random
 import string
 
-a = int(input(" 1. Encode \n 2. Decode \n Enter your choice:-\t"))
-if (a > 0 and a < 3):
-    msg2 = ""
+#Prompt user to chosse to encrpyt or decrpyt the message
+choice = int(input(" 1. Encode \n 2. Decode \n Enter your choice:-\t"))
+if (choice > 0 and choice < 3): #if choice is not > 0 or < 3 then raise the error to user!!.
     y = 0
 
-    while( a < 3):
-        match(a):
+    while( choice < 3):
+        match(choice):
             case 1:
                 
                 msg = input(" Enter your message to encode:-\t")
                 if (len(msg) > 3):
-                    for i in range(len(msg)):
-                        if(msg[i] == " "):
-                            msg = msg.replace(msg[i],"!")
+                    # for i in range(len(msg)):
+                    #     if(msg[i] == " "):
+                    #         msg = msg.replace(msg[i],"!")
                     print(msg)
                     msg = msg[1:] + msg[0]
                     print(msg)
                     msg2 = ""
                     
                     for i in range(len(msg)):
-                        if (msg[i] == "!"):
+                        if (msg[i] == " "):
                             msg2 = msg2 + "!"
-                            continue
                         else:
                             msg1 = chr(ord(msg[i]) + 100)
                             msg2 = msg2 + msg1
@@ -53,7 +52,7 @@ if (a > 0 and a < 3):
                     b = input("Press y: yes or n:no\t")
                     if (b == 'y' or b == 'Y'):
                         y = 1
-                        a = 2
+                        choice = 2
                     else:
                         break
                 else:
@@ -64,7 +63,7 @@ if (a > 0 and a < 3):
                     b = input("Press y: yes or n:no\t")
                     if (b == 'y' or b == 'Y'):
                         y = 1
-                        a = 2
+                        choice = 2
                         msg = msg
                     else:
                         break
@@ -73,14 +72,13 @@ if (a > 0 and a < 3):
                     if (len(msg) < 4):
                         msg = msg[::-1]
                         print(f"Decoded message is:- {msg}")
-                        a = 3
+                        choice = 3
                     else: 
                         msg = msg[3:len(msg) - 3] 
                         msg2 = ""
                         for i in range(len(msg)):
                             if (msg[i] == "!"):
                                 msg2 = msg2 + " "
-                                continue
                             else:
                                 msg1 = chr(ord(msg[i]) - 100)
                                 msg2 = msg2 + msg1
@@ -90,20 +88,19 @@ if (a > 0 and a < 3):
                         msg = s1 + msg
                         
                         print(f"Decoded message is:- {msg}")
-                        a = 3
+                        choice = 3
                 else:
                     msg = input("Enter your message to decode:-\t")
                     if ( len(msg) < 4):
                         msg = msg[::-1]
                         print(f"Decoded message is:- {msg}")
-                        a = 3
+                        choice = 3
                     else:
                         msg = msg[3:len(msg) - 3] 
                         msg2 = ""
                         for i in range(len(msg)):
                             if (msg[i] == "!"):
                                 msg2 = msg2 + " "
-                                continue
                             else:
                                 msg1 = chr(ord(msg[i]) - 100)
                                 msg2 = msg2 + msg1
@@ -113,7 +110,7 @@ if (a > 0 and a < 3):
                         msg = s1 + msg
                         
                         print(f"Decoded message is:- {msg}")
-                        a = 3
+                        choice = 3
             case _:
                 print("Invalid choice")
 else:
