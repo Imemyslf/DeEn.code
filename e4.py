@@ -14,6 +14,7 @@ if (choice > 0 and choice < 3): #if choice is not > 0 or < 3 then raise the erro
                     line = input("")
                     if line == "ENDD":
                         break
+                    
                     msg += line + "\n"
                 msg = msg[1:] + msg[0]
                 msg2 = ""
@@ -52,11 +53,11 @@ if (choice > 0 and choice < 3): #if choice is not > 0 or < 3 then raise the erro
                                 msg1 = chr(ord(msg[i]) - 100)
                                 msg2 = msg2 + msg1
                             
-                        msg = msg2 
+                        msg = msg2
                         s1 = msg[len(msg)-1]
                         msg = msg.replace(msg[len(msg)-1],"")
                         msg = s1 + msg
-                        
+                        1
                         print(f"Decoded message is:- \n {msg}")
                         choice = 3
                 else:

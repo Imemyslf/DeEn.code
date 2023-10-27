@@ -8,10 +8,10 @@ app = CTk()
 label_1 = customtkinter.CTkLabel(app,text="Encryption and Decryption", font=("Rupee Foradian", 25,"bold"))
 label_1.grid(row=0,column=0,columnspan=3)
 
-label_2  = customtkinter.CTkLabel(app,text="Encrypted message")
+label_2  = customtkinter.CTkLabel(app,text="Decrypted  message")
 label_2 .grid(row=1,column=0)
 
-label_2  = customtkinter.CTkLabel(app,text="Decrypted message")
+label_2  = customtkinter.CTkLabel(app,text="Encrypted message")
 label_2 .grid(row=1,column=2)
 
 
