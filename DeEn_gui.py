@@ -44,7 +44,7 @@ def button_2():
     decrypted_text = decryption.get("1.0", "end-1c")  # Get the text from the encryption Textbox
     decrypted_message = dean (decrypted_text,2)
     print(f"Decrypted Message:- {decrypted_message}")
-    
+
 decrypt_button = customtkinter.CTkButton(app,text="Decrypt",command = button_2)
 decrypt_button.grid(row=4, column=2)
 app.mainloop()
