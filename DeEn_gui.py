@@ -29,7 +29,7 @@ decryption.grid(row=2, column=2)
 def button_1():
     encrypted_text = encryption.get("1.0", "end-1c")  # Get the text from the encryption Textbox
     encrypted_message = dean(encrypted_text,1)
-    print(f"Encrypted Message:- {encrypted_message}")
+    print(f"Encrypted Message:- \n {encrypted_message}")
     # print(encryption.get(1.0, customtkinter.END))
 
 encrypt_button = customtkinter.CTkButton(app,text="Encrypt",command = button_1)
@@ -43,7 +43,7 @@ label_6.grid(row=3, column=2)
 def button_2():
     decrypted_text = decryption.get("1.0", "end-1c")  # Get the text from the encryption Textbox
     decrypted_message = dean (decrypted_text,2)
-    print(f"Decrypted Message:- {decrypted_message}")
+    print(f"Decrypted Message:- \n {decrypted_message}")
 
 decrypt_button = customtkinter.CTkButton(app,text="Decrypt",command = button_2)
 decrypt_button.grid(row=4, column=2)

@@ -30,6 +30,8 @@ def dean( msg, choice):
                         for i in range(len(msg)):
                             if (msg[i] == "!"):
                                 msg2 = msg2 + " "
+                            elif (msg[i] == "`"):
+                                msg2 = msg2 + "\n"
                             else:
                                 msg1 = chr(ord(msg[i]) - 100)
                                 msg2 = msg2 + msg1
