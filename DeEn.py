@@ -1,10 +1,6 @@
 import random
 import string
-
 def dean( msg, choice):
-    if (choice > 0 and choice < 3): #if choice is not > 0 or < 3 then raise the error to user!!.
-        # yes = 0 
-        while( choice < 3):
             match(choice):
                 case 1:
                     msg = msg[1:] + msg[0]
@@ -22,7 +18,6 @@ def dean( msg, choice):
                     l = string.ascii_lowercase
                     msg = ''.join(random.choice(l) for i in range(3)) + msg
                     msg =msg +  ''.join(random.choice(l) for i in range(3))
-                    choice = 3
                     return msg
                 case 2:
                         msg = msg[3:len(msg) - 3] 
@@ -36,11 +31,7 @@ def dean( msg, choice):
                                 msg1 = chr(ord(msg[i]) - 100)
                                 msg2 = msg2 + msg1
                         msg = msg2 
-                        
                         msg = msg[len(msg)-1] + msg[0:len(msg)-1]
-                        choice = 3
                         return msg
                 case _:
                     print("Invalid choice")
-    else:
-        raise ValueError("Invalid choice")
