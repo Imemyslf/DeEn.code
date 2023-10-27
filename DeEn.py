@@ -21,8 +21,7 @@ def dean( msg, choice):
                     msg = msg2
                     l = string.ascii_lowercase
                     msg = ''.join(random.choice(l) for i in range(3)) + msg
-                    msg =msg +  ''.join(random.choice(l) for i in range(3)) 
-                    # print(f"Encoded message is:- \n {msg}\n")
+                    msg =msg +  ''.join(random.choice(l) for i in range(3))
                     choice = 3
                     return msg
                 case 2:
@@ -35,9 +34,6 @@ def dean( msg, choice):
                                 msg1 = chr(ord(msg[i]) - 100)
                                 msg2 = msg2 + msg1
                         msg = msg2 
-                        # s1 = msg[len(msg)-1]
-                        # msg = msg.replace(msg[len(msg)-1],"")
-                        # msg = s1 + msg
                         
                         msg = msg[len(msg)-1] + msg[0:len(msg)-1]
                         choice = 3
