@@ -35,5 +35,5 @@ customtkinter (CTk) library
 ## Screenshot
 ![cryption](https://github.com/Imemyslf/DeEn.code/assets/112005565/79e127de-0ba7-4813-82f9-3dd9187c6189)
 
-
-
+Thank You Everyone For Helping Me With This Project
+Special Thank's to @https://github.com/ValerianCoelho/ValerianCoelho for Contributing and Guiding me throughtout the Project!!. 
