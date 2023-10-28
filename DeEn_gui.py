@@ -9,21 +9,21 @@ window = CTkFrame(app)
 window.pack(padx=20, pady=20)
 
 
-label_1 = customtkinter.CTkLabel(window,text="ki's-cryption", font=("Rupee Foradian", 25,"bold"))
+label_1 = customtkinter.CTkLabel(window,text="Ki's-cryption", font=("Arial Unicode MS", 30,"bold"))
 label_1.grid(row=0,column=0,columnspan=3, padx=10, pady=10)
 
-label_2  = customtkinter.CTkLabel(window,text="Decrypted message")
+label_2  = customtkinter.CTkLabel(window,text="Decrypted message",font=("Arial Unicode MS", 15))
 label_2 .grid(row=1,column=0)
 
-label_2  = customtkinter.CTkLabel(window,text="Encrypted message")
+label_2  = customtkinter.CTkLabel(window,text="Encrypted message",font=("Arial Unicode MS", 15))
 label_2 .grid(row=1,column=2)
 
 
-encryption = customtkinter.CTkTextbox(window, border_width=2, corner_radius=5)
+encryption = customtkinter.CTkTextbox(window, border_width=2, corner_radius=20,border_color="green",text_color="#FF783F")
 encryption.insert("0.0", "")  
 encryption.grid(row=2, column=0, padx=(10,0), pady=(0,20))
 
-decryption = customtkinter.CTkTextbox(window, border_width=2)
+decryption = customtkinter.CTkTextbox(window, border_width=2, corner_radius=20,border_color="red",text_color="#FF783F")
 decryption.insert("0.0", "")  
 decryption.grid(row=2, column=2, padx=(10, 10), pady=(0,20))
 
