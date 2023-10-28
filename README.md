@@ -2,7 +2,7 @@
 # Hi, I'm Kishan! 👋
 
 
-## Welcome to my Ki's-cryption Project.  
+## Welcome to my Ki's-Cryption Project.  
 
 ### Overview:
 
