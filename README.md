@@ -39,4 +39,4 @@ customtkinter (CTk) library
 
 Thank You Everyone For Helping Me With This Project.
 
-Special Thank's to @https://github.com/ValerianCoelho/ValerianCoelho for Contributing and Guiding me throughtout the Project!!. 
+Special Thank's to @https://github.com/ValerianCoelho/ValerianCoelho for Contributing and Guiding me throughtout the Project 😄🙌!!. 
