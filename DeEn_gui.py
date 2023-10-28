@@ -30,15 +30,13 @@ decryption.grid(row=2, column=2, padx=(10, 10), pady=(0,20))
 def button_1():
     decryption.delete("0.0",customtkinter.END)
     encrypted_text = encryption.get("1.0", "end-1c")  # Get the text from the encryption Textbox
-    global encrypted_message 
     encrypted_message = dean(encrypted_text,1)
     decryption.insert("0.0",encrypted_message)
     encryption.delete("0.0",customtkinter.END)
 
 def button_2():
     encryption.delete("0.0",customtkinter.END)
-    decrypted_text = decryption.get("1.0", "end-1c")  # Get the text from the encryption Textbox
-    global decrypted_message 
+    decrypted_text = decryption.get("1.0", "end-1c")  # Get the text from the encryption Textbox 
     decrypted_message = dean (decrypted_text,2)
     encryption.insert("0.0",decrypted_message)
     decryption.delete("0.0",customtkinter.END)
