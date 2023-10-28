@@ -6,7 +6,7 @@ from DeEn import dean
 
 app = CTk()
 app.title("Cryption")
-
+app.iconbitmap("icon3.ico")
 window = CTkFrame(app)
 window.pack(padx=20, pady=20)
 
