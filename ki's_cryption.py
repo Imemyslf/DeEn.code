@@ -5,6 +5,8 @@ from customtkinter import *
 from DeEn import dean
 
 app = CTk()
+app.title("Cryption")
+
 window = CTkFrame(app)
 window.pack(padx=20, pady=20)
 
